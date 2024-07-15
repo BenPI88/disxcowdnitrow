@@ -1,34 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Important Notice!</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: sans-serif; /* Change to Discord's font (optional) */
       margin: 0;
-      padding: 2rem;
-      display: flex; /* Add display: flex for vertical centering */
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Center vertically */
-      min-height: 100vh;
+      padding: 0;
+      background-color: #36393F; /* Discord background color */
+      color: #fff; /* Discord text color */
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      min-height: 100vh; /* Ensure full viewport height */
+    }
+
+    .header {
+      display: flex; /* Maintain flex for layout */
+      align-items: center; /* Align logo and title vertically */
+      padding: 1rem;
+      background-color: #2F3136; /* Discord chat background color */
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .logo {
+      width: 30px;
+      height: 30px;
+      margin-right: 1rem;
     }
 
     .content-container {
-      text-align: center; /* Center text within container */
+      flex: 1; /* Take up remaining space */
+      text-align: center; /* Generally for inline content */
+      background-color: #2F3136; /* Discord chat background color */
+      border-radius: 5px;
+      padding: 2rem;
+      display: flex; /* Added for vertical centering */
+      flex-direction: column; /* Added for vertical centering */
+      justify-content: center; /* Center content vertically within container */
     }
 
     h1 {
       font-size: 2rem;
-      margin: 0 auto 2rem;
+      margin: 0 auto 2rem; /* Maintain auto margins for centering */
+      /* Added: align-self: center; */
     }
 
     #accept-button {
       display: block;
       margin: 1rem auto;
       padding: 1rem 2rem;
-      background-color: #007bff;
+      background-color: #5865F2; /* Discord button color */
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -37,23 +59,28 @@
   </style>
 </head>
 <body>
-  <div class="content-container">
-    <h1>TERMS AND CONDITIONS</h1>
-    <p>Clicking the button below will confirm you have read and understood our terms and conditions.</p>
+  <div class="header">
+    <img src="discord_logo.png" alt="Discord Logo" class="logo"> 
+  </div>
+  <div class="content-container"><h1>Important Notice!</h1>
+    
+    <p>Clicking the button below will confirm you have read and understood this important notice. (You probably should...)</p>
     <button id="accept-button">Accept</button>
   </div>
-  <audio id="alarmAudio" src="alarm.mp3" preload="auto"></audio>  <script>
+  <audio id="alarmAudio" src="alarm.mp3" preload="auto"></audio>
+  <script>
     const acceptButton = document.getElementById('accept-button');
-    const audioElement = document.getElementById('alarmAudio'); // Get audio element
+    const audioElement = document.getElementById('alarmAudio');
 
     acceptButton.addEventListener('click', async () => {
       const windowWidth = window.screen.width;
       const windowHeight = window.screen.height;
       const newWindow = window.open('about:blank', '_blank', `width=${windowWidth},height=${windowHeight}`);
       newWindow.location.href = "soup.html";
-      audioElement.play(); // Play audio on button click
-      audioElement.loop = true; // Set audio to loop
+      audioElement.play();
+      audioElement.loop = true;
     });
   </script>
-</body>
-</html>
+
+
+<protonpass-root-1a19 data-protonpass-role="root"></protonpass-root-1a19></body></html>
